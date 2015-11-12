@@ -12,5 +12,11 @@ module.exports = {
 		});
 
 		next();
+	},
+
+	generateId: function( req, res, next ) {
+		req.body.skill.id = req.body.skills.length;
+
+		next();
 	}
 }

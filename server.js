@@ -14,6 +14,13 @@ app.get('/occupations', mainCtrl.getOccupations);
 app.get('/occupations/latest', mainCtrl.latestOccupation);
 app.get('/hobbies', mainCtrl.getHobbies);
 app.get('/hobbies/:type', mainCtrl.getHobbiesByType);
+app.get('/skillz', mainCtrl.getSkillz);
+
+app.put('/name', mainCtrl.changeName);
+app.put('/location', mainCtrl.changeLocation);
+app.post('/occupations', mainCtrl.addOccupation);
+app.post('/hobbies', mainCtrl.addHobby);
+app.post('/skillz', middleware.generateId, mainCtrl.addSkill);
 
 
 
